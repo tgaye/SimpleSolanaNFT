@@ -67,7 +67,7 @@ export default function Home() {
         <WalletModalProvider>
           <MetaplexProvider>
           <div className={styles.App}>
-          <ButtonWrapper style={{ fontSize: '3vh', padding: '10px 20px', width: '45vh', textAlign: 'center', 
+          <ButtonWrapper style={{ fontSize: '3vh', padding: '10px 20px', width: '45vh', textAlign: 'center', color: 'black',
             border: "2px solid black", justifyContent: "center", position: "fixed", top: "10%", left: "50%", transform: "translate(-50%,-50%)" }} />
           <h2 style={{ color: 'white', position: 'absolute', left: '50%', top: '14%', transform: 'translate(-50%, -50%)', fontSize: '5vh', textShadow: '2px 2px black', fontFamily: 'Goldman, sans-serif' }}>SOLBUDDY</h2>
           

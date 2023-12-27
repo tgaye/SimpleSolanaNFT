@@ -590,35 +590,62 @@ const LearnMoreButton = () => {
           )}
 
           {showLearnMore && (
-            <div id="windowsXPWindow" style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%,-155%)", textAlign: 'center', justifyContent: 'center', zIndex: '1000000000000000000000000000000000'}}>
+            <div id="windowsXPWindow" style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%,-120%)", textAlign: 'center', justifyContent: 'center', zIndex: '1000000000000000000000000000000000'}}>
               <WindowsXPWindow 
                 title="Learn More"
                 onClose={handleClose}
-                style={{ width: '45vh', height: '30vh', textAlign: 'center', justifyContent: 'center'}}
+                style={{ width: '50vh', height: '42vh', textAlign: 'center', justifyContent: 'center'}}
               >
-                {/* Window content */}
-                <p style={{marginTop: '4vh', width: '32vh', textAlign: 'center', justifyContent: 'center', marginLeft: '5.5vh'}}>
-                SOLbuddy is the first example of an on-chain interactive video game on the Solana blockchain.<br></br><br></br>
-                The tokens exist as SPL NFTs that follow the metaplex token standard.  The data for the classic Interactive Buddy flash game is stored and accessible on-chain. <br></br> <br></br> Your purchase will fund continued opensource development for Solana.  Please Enjoy!
-                  {/* More content */}
+             
+                <p style={{marginTop: '3vh', width: '36vh', textAlign: 'center', justifyContent: 'center', marginLeft: '6vh'}}>
+                <span style={{fontWeight: 'bold'}}>SOLbuddy</span> is the  <span style={{fontWeight: 'bold'}}>first example of an on-chain interactive video game </span> on the <span style={{fontWeight: 'bold'}}>Solana blockchain.</span><br></br><br></br>
+                <span style={{fontWeight: 'bold'}}>The tokens</span> exist as <span style={{fontWeight: 'bold'}}>SPL NFTs</span> that follow the <span style={{fontWeight: 'bold'}}>metaplex token standard</span>.  
+                The data for the classic Interactive Buddy flash game is  <span style={{fontWeight: 'bold'}}>stored and accessible on-chain.</span> <br></br> <br></br> 
+                Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
+
+                <br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
+                Mint Price: &nbsp; 0.5 SOL <br></br>
+                Mint Supply: &nbsp; 2000 NFTs
+                </span>
                 </p>            
               </WindowsXPWindow>
             </div>
           )}
 
-          {showMintMenu && (
-              <div className="mintMenu" style={{zIndex: '10000000000000000000000'}}>
-                <label>How many NFTs would you like to mint?</label>
-                <input
-                  type="number"
-                  value={numNftsToMint}
-                  onChange={(e) => setNumNftsToMint(Math.max(1, parseInt(e.target.value)))}
-                  min="1"
-                />
-                <button onClick={handleMintConfirm}>Confirm</button>
-                <button onClick={() => setShowMintMenu(false)}>Cancel</button>
-              </div>
-          )}
+      {showMintMenu && (
+        <WindowsXPWindow
+          title="Mint NFTs"
+          onClose={() => setShowMintMenu(false)}
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -200%)',
+            zIndex: 100000,
+            width: '45vh', // Adjust width as necessary
+            textAlign: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ padding: '20px' }}>
+            <div style={{ marginBottom: '10px' }}>
+              How many NFTs would you like to mint?
+            </div>
+            <input
+              type="number"
+              value={numNftsToMint}
+              onChange={(e) => setNumNftsToMint(Math.max(1, parseInt(e.target.value)))}
+              min="1"
+              style={{ marginBottom: '20px' }}
+            />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <button onClick={handleMintConfirm} style={{ marginRight: '5px' }}>Confirm</button>
+              <button onClick={() => setShowMintMenu(false)}>Cancel</button>
+            </div>
+          </div>
+        </WindowsXPWindow>
+      )}
+
         </div>
       </div>
     </div>

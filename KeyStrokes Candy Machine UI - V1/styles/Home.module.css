@@ -138,6 +138,18 @@
   top: 10%;
 }
 
+.wallet-adapter-button{
+  color: black !important;
+}
+
+.wallet-adapter-modal-list{
+  color: black !important;
+}
+
+.wallet-adapter-modal-list-more{
+  color: black !important;
+}
+
 /* .wallet-adapter-dropdown{
   transform: scale(2);
 } */

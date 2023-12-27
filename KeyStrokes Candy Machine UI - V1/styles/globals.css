@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.wallet-adapter-button{
+  color: black !important;
+}
+
+.wallet-adapter-modal-list{
+  color: black !important;
+}
+
+.wallet-adapter-modal-list-more{
+  color: black !important;
+}
