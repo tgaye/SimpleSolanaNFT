@@ -70,13 +70,24 @@ export default function Home() {
           <ButtonWrapper style={{ fontSize: '3vh', padding: '10px 20px', width: '45vh', textAlign: 'center', 
             border: "2px solid black", justifyContent: "center", position: "fixed", top: "10%", left: "50%", transform: "translate(-50%,-50%)" }} />
           <h2 style={{ color: 'white', position: 'absolute', left: '50%', top: '14%', transform: 'translate(-50%, -50%)', fontSize: '5vh', textShadow: '2px 2px black', fontFamily: 'Goldman, sans-serif' }}>SOLBUDDY</h2>
+          
           <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
             <Image src={yT} alt="Your Image" width="500vh" height="400vh" style={{ border: "2px solid black", borderRadius: "2vh" }} />
           </div>
           {/* <h2 style={{ color: 'white', position: 'absolute', left: '50%', top: '68%', transform: 'translate(-50%, -50%)', fontSize: '3vh', textShadow: '1px 1px black', fontFamily: 'Goldman, sans-serif' }}>Mint: 0/2000</h2> */}
+{/* 
+          <div id="windowsXPWindow" style={{display:'none', position: "fixed", top: "50%", left: "50%", transform: "translate(-50%,-50%)", textAlign: 'center', justifyContent: 'center', zIndex: '1000000000000000000000000000000000'}}>
+            <WindowsXPWindow 
+              id="windowsXPWindow"
+              title="Learn More"
+              style={{ width: '45vh', height: '30vh', textAlign: 'center', justifyContent: 'center'}}
+            >
+              <p style={{marginTop: '4vh', width: '32vh', textAlign: 'center', justifyContent: 'center', marginLeft: '5.5vh'}}>SOLbuddy is the first example of an on-chain interactive video game on the Solana blockchain. ...</p>
+            </WindowsXPWindow>
+          </div> */}
 
-          <MintNFTs onClusterChange={handleChange} />
-        </div>
+          <MintNFTs onClusterChange={handleChange} onLearnMoreClick={() => setShowLearnMore(true)} />        
+          </div>
           </MetaplexProvider>
         </WalletModalProvider>
       </WalletProvider>

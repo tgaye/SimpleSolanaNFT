@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css";
+import WindowsXPWindow from '../components/windowsXP';
 import { useMetaplex } from "./useMetaplex";
 import { useState, useEffect } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
@@ -43,6 +44,7 @@ export const MintNFTs = ({ onClusterChange }) => {
   const [isMaxRedeemed, setIsMaxRedeemed] = useState(false);
   const [mintingInProgress, setMintingInProgress] = useState(false);
   const [mintedCount, setMintedCount] = useState(0); 
+  const [showLearnMore, setShowLearnMore] = useState(false);
 
   const [showMintMenu, setShowMintMenu] = useState(false);
   const [numNftsToMint, setNumNftsToMint] = useState(1);
@@ -138,19 +140,27 @@ export const MintNFTs = ({ onClusterChange }) => {
     }
   };
 
-  const LearnMoreButton = () => {
-    const handleLearnMoreClick = () => {
-      console.log("Learn More");
-    };
-  
-    return (
-      <div className={styles.container} style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,30%)" }}>
-        <button onClick={handleLearnMoreClick} style={{ width: '45vh' }}>
-          Learn More
-        </button>
-      </div>
-    );
+const handleClose = () => {
+  console.log("Close button clicked");
+  setShowLearnMore(false); // Hide the window
+};
+
+
+const LearnMoreButton = () => {
+  const handleLearnMoreClick = () => {
+    setShowLearnMore(true); // Set to true to show the window
+    console.log("Learn More");
   };
+
+
+  return (
+    <div className={styles.container} style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,30%)" }}>
+      <button onClick={handleLearnMoreClick} style={{ width: '45vh', fontSize: '2.2vh' }}>
+        Learn More
+      </button>
+    </div>
+  );
+};
 
   const checkEligibility = async () => {
     //wallet not connected?
@@ -561,7 +571,7 @@ export const MintNFTs = ({ onClusterChange }) => {
           <div className={styles.nftForm}>
             {
               !disableMint && !mintingInProgress && (
-                <button onClick={onClick} disabled={disableMint}  style={{width: '45vh'}}>
+                <button onClick={onClick} disabled={disableMint}  style={{width: '45vh', fontSize: '2.2vh'}}>
                   Mint NFT
                 </button>
               )
@@ -576,6 +586,23 @@ export const MintNFTs = ({ onClusterChange }) => {
                 src={nft?.json?.image || "/fallbackImage.jpg"}
                 alt="The downloaded illustration of the provided NFT address."
               /> */}
+            </div>
+          )}
+
+          {showLearnMore && (
+            <div id="windowsXPWindow" style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%,-155%)", textAlign: 'center', justifyContent: 'center', zIndex: '1000000000000000000000000000000000'}}>
+              <WindowsXPWindow 
+                title="Learn More"
+                onClose={handleClose}
+                style={{ width: '45vh', height: '30vh', textAlign: 'center', justifyContent: 'center'}}
+              >
+                {/* Window content */}
+                <p style={{marginTop: '4vh', width: '32vh', textAlign: 'center', justifyContent: 'center', marginLeft: '5.5vh'}}>
+                SOLbuddy is the first example of an on-chain interactive video game on the Solana blockchain.<br></br><br></br>
+                The tokens exist as SPL NFTs that follow the metaplex token standard.  The data for the classic Interactive Buddy flash game is stored and accessible on-chain. <br></br> <br></br> Your purchase will fund continued opensource development for Solana.  Please Enjoy!
+                  {/* More content */}
+                </p>            
+              </WindowsXPWindow>
             </div>
           )}
 
