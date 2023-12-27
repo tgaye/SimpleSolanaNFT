@@ -1,0 +1,108 @@
+{
+  "program": {
+    "candyMachine": "27B6vwXV9gv2vvufwMJRAAV2HgJEkiM2avUvuFLRWyHJ",
+    "candyGuard": "9fH8qAAHtWfy2jpHvd8HzDkQeNXvVc6TgUEVJfLRE9QC",
+    "candyMachineCreator": "5YyiYGg2PbJSxWBSZZaDbgSVFNdej9QuxY84mhsZEKCZ",
+    "collectionMint": "DbgdnWmg7W8FPeKQq8e12K5nSRyLT771R7HvqTJqXjgn"
+  },
+  "items": {
+    "-1": {
+      "name": "SOLbuddys",
+      "image_hash": "491d110535d622387d044054f304a238424c69f84243df26db2a9f300b773d7c",
+      "image_link": "https://arweave.net/N1w7zfieSUvG4fRJHiEafM2XPy335SgbvML9u8gbBYs?ext=png",
+      "metadata_hash": "41644937f762a2c1afe04941f4690931a152b8a2684159844f27dfdeb60c70d8",
+      "metadata_link": "https://arweave.net/E3VGbBjn_MgkoTT5aC9Xgr7JKDZhXji3eAQB88XI330",
+      "onChain": false
+    },
+    "0": {
+      "name": "SOLbuddy #1",
+      "image_hash": "491d110535d622387d044054f304a238424c69f84243df26db2a9f300b773d7c",
+      "image_link": "https://arweave.net/8RTdzkpQsEobtb75BoEtNT3PrMVzO8p9Fqimhk4Er9c?ext=png",
+      "metadata_hash": "e1644aac36c8fdbae1ca492f176ee826a6f3e1e5e689b0c8f1c775258d88b45d",
+      "metadata_link": "https://arweave.net/2sQKM_BFaIryJ7C8EDJ4p7qWpXgQDbPf-AhNl2uEPxg",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "1": {
+      "name": "SOLbuddy #2",
+      "image_hash": "491d110535d622387d044054f304a238424c69f84243df26db2a9f300b773d7c",
+      "image_link": "https://arweave.net/hqpIiBvtU3qAChaC683DeGp8VJ9bp48zPW9a9HdESlw?ext=png",
+      "metadata_hash": "77e16b118cf492e26db0d114858493ed9046024fd9896377fc8a8ed7bf18f7a9",
+      "metadata_link": "https://arweave.net/33zHAn5B7Nl4mgHZedRqbVbHE5L6IBtninVml3al01M",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "2": {
+      "name": "SOLbuddy #3",
+      "image_hash": "8202dfd3b8f97ecca1dc30c4bf5286e68b674534fab1c24da7eb4840cd1cffcf",
+      "image_link": "https://arweave.net/OdylGMSNMEQw_V42b1Vn9tZIk6Bvi0gBniy1v1SZUXg?ext=png",
+      "metadata_hash": "5ae7837254bbe6c3601fbf879c4ebb52deb302a04a28230657f22eda6a94708e",
+      "metadata_link": "https://arweave.net/v1pXmpa7O2BjoXQFXJW_YlL5Pebh3mwMCpCBKx6FJug",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "3": {
+      "name": "SOLbuddy #4",
+      "image_hash": "aa2056d313bfc7c58df4674e7004572a2962714629a33d241b7ca30b825fb74d",
+      "image_link": "https://arweave.net/zJUpkxbH2yOtEbknTj6Xrc0fyBk-ngaeyRkJJmdx2y4?ext=png",
+      "metadata_hash": "17b543dcce0223f2ae0262f9f241b20b603d985b3ad0baea4cba402ace884bcb",
+      "metadata_link": "https://arweave.net/ZtiJMyWspaGzmzXs2ls2SynFcTjAq9UKtpHcO_QFceg",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "4": {
+      "name": "SOLbuddy #5",
+      "image_hash": "8ef093809df256e34746a2bc7c235ca7646fae5180a83d4ce8362e0d0370f85c",
+      "image_link": "https://arweave.net/C4K7lkr6u10ilEUhkaoiQBKd61TjQTdlyhqG2yR4e58?ext=png",
+      "metadata_hash": "ebebcbb9d22e910d24b1d33628a445e1c4a59c5a9019fb2a6cbcccbc9b205430",
+      "metadata_link": "https://arweave.net/1dfwKHe34J0V4YyGj2Gj3uH61SNIQU-ZdeXQDyEm7y8",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "5": {
+      "name": "SOLbuddy #6",
+      "image_hash": "e7aa20acd3aa45ced26d86f1e8f9c1b866896317d31b9e542e904d8879a2c8c8",
+      "image_link": "https://arweave.net/lJx17vODB_yXwzFBMl5kLQqh8fS4BRX7lPr0sZsDzfE?ext=png",
+      "metadata_hash": "60b722a44de94949a1201860ec2a233cd686aaba405232c52bcb5ddc256d1f84",
+      "metadata_link": "https://arweave.net/-Nso4xsbRtubkh9Z5l8nGsgv6bkZxpvtJGtnVp82t6U",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "6": {
+      "name": "SOLbuddy #7",
+      "image_hash": "6ade759e2f2f38c22c739b054ab7cd27ae6f2a7277612342dad8cbec4fcbff08",
+      "image_link": "https://arweave.net/fEA730bqg5R1oqq-qXEq28gIj6_JkltKB1NebwPEhL4?ext=png",
+      "metadata_hash": "c5508f01603a41a10189c92b33e554544775d63ce64721748dcc316e1eefb68f",
+      "metadata_link": "https://arweave.net/G5E_H1JEqpYOb7Mnocwcf5iJBiP5chrtjCDmlJuXErQ",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "7": {
+      "name": "SOLbuddy #8",
+      "image_hash": "55a97dead7a18c6234d65996f41be8978eed4d73cfac7688a820b0e1f39bc035",
+      "image_link": "https://arweave.net/pi8ij3ZiO-1omx1Egh4u1g8CE5oTn-6Mk4LUTJBn23A?ext=png",
+      "metadata_hash": "379a597c652aa6ac727d8d2eed20bc0c5b547af9de5fc8130c107cd0f5b2744f",
+      "metadata_link": "https://arweave.net/ZNf34cbzbq6344gbhR4s7qtm_whqFfrdNBre21U1GOE",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "8": {
+      "name": "SOLbuddy #9",
+      "image_hash": "e78995800f00934cea8914ed95f644f0e8af67a9c6cc0ce32b55f28c0a724ed9",
+      "image_link": "https://arweave.net/xMCxWABWoU8RoVUnay9JeSb9DppTYzT7CHIsoFEHivc?ext=png",
+      "metadata_hash": "f48d91bf6f12b14c8c01beb8545765a1d6357d0c9011fb628c7de94c3eab3644",
+      "metadata_link": "https://arweave.net/Ie8UjurAzh0xwkpnRi7AvwGg8k1ipNNpRxMfgvCOr-I",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    },
+    "9": {
+      "name": "SOLbuddy #10",
+      "image_hash": "19aad6cc2765d036ca42ed4cbee0eda00a5401aed0a7866cf79125d449ddea7e",
+      "image_link": "https://arweave.net/Xcv2uCjtd1t1ptefG7eVMGcS5fZWpoAq8T2e-BQ2zx4?ext=png",
+      "metadata_hash": "eeab793c5109773870a7283c7daec45cb0c1b41e539b58c1b05b3f523a524798",
+      "metadata_link": "https://arweave.net/4Ooz0EhdGfLXOaRqde_bX0BVjk9iOoM8xUd4EnvK-2A",
+      "onChain": true,
+      "animation_link": "https://solbuddynft.vercel.app/index.html"
+    }
+  }
+}

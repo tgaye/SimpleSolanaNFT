@@ -1,0 +1,27 @@
+{
+  "number": 10,
+  "symbol": "BUDDY",
+  "sellerFeeBasisPoints": 250,
+  "isMutable": true,
+  "isSequential": true,
+  "creators": [
+    {
+      "address": "Dpyr9a1rfw8zNw5hStcB24dqb6Zc46ccxizw3NAfRS1S",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": {
+    "default": {
+      "solPayment": {
+        "value": 0.01,
+        "destination": "BGuoR2mFnoEHCBgP4DFarRyhpsTYcqJgDFRTZm9rkSCq"
+      }
+    }
+  }
+}

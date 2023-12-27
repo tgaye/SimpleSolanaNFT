@@ -1,0 +1,36 @@
+{
+  "name": "SOLbuddy #10",
+  "symbol": "BUDDY",
+  "description": "Your on-chain SOLbuddy is the first example of a video game as a playable NFT on Solana!  View your SOLbuddy on Magic Eden or SOLscan and expand it's details.",
+  "seller_fee_basis_points": 250,
+  "image": "9.png",
+  "animation_url": "https://solbuddynft.vercel.app/index.html",
+  "mint_id": "2aVq4aVuzDEECxrosuSrzV8atgdM7FfUAPwLoheScVLt",
+  "attributes": [
+      {
+          "trait_type": "Tier",
+          "value": "1",
+          "max_value": "3"
+      }
+    
+  ],
+  "collection": {
+      "name": "SOLbuddy NFTs",
+      "family": "SOLbuddy"
+  },
+  "properties": {
+      "files": [
+          {
+              "uri": "9.png",
+              "type": "image/png"
+          }
+      ],
+      "category": "html",
+      "creators": [
+          {
+              "address": "GAJh6ixRTSS6uh47ZDEUgqjhdKXRV7h3LAooMXpKmHqg",
+              "share": 100
+          }
+      ]
+  }
+}
