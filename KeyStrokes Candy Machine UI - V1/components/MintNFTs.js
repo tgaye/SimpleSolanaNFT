@@ -44,6 +44,9 @@ export const MintNFTs = ({ onClusterChange }) => {
   const [mintingInProgress, setMintingInProgress] = useState(false);
   const [mintedCount, setMintedCount] = useState(0); 
 
+  const [showMintMenu, setShowMintMenu] = useState(false);
+  const [numNftsToMint, setNumNftsToMint] = useState(1);
+
   const [groups, setGroups] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(DEFAULT_GUARD_NAME);
   const [candyMachineLoaded, setCandyMachineLoaded] = useState(false);
@@ -53,6 +56,8 @@ export const MintNFTs = ({ onClusterChange }) => {
   );
   let candyMachine;
   let walletBalance;
+
+  
 
   const fetchMintedCount = async () => {
     try {
@@ -397,8 +402,45 @@ export const MintNFTs = ({ onClusterChange }) => {
   }
 
   const onClick = async () => {
+    setShowMintMenu(true);
+    // setMintingInProgress(true);
+    // try {
+    //   // Here the actual mint happens. Depending on the guards that you are using you have to run some pre validation beforehand 
+    //   // Read more: https://docs.metaplex.com/programs/candy-machine/minting#minting-with-pre-validation
+    //   await mintingGroupAllowlistCheck();
+
+    //   const group = selectedGroup == DEFAULT_GUARD_NAME ? undefined : selectedGroup;
+    //   const { nft } = await metaplex.candyMachines().mint({
+    //     candyMachine,
+    //     collectionUpdateAuthority: candyMachine.authorityAddress,
+    //     ...group && { group },
+    //   });
+
+    //   setNft(nft);
+    // } catch(e) {
+    //   throw e;
+    // } finally {
+    //   setMintingInProgress(false);
+    // }
+  };
+
+  const handleMintConfirm = async () => {
+    setShowMintMenu(false);
     setMintingInProgress(true);
 
+    try {
+      for (let i = 0; i < numNftsToMint; i++) {
+        await mintSingleNFT(); // Your existing logic to mint a single NFT
+      }
+    } catch (e) {
+      console.error("Minting error:", e);
+    } finally {
+      setMintingInProgress(false);
+    }
+  };
+
+  const mintSingleNFT = async () => {
+    setMintingInProgress(true);
     try {
       // Here the actual mint happens. Depending on the guards that you are using you have to run some pre validation beforehand 
       // Read more: https://docs.metaplex.com/programs/candy-machine/minting#minting-with-pre-validation
@@ -416,8 +458,9 @@ export const MintNFTs = ({ onClusterChange }) => {
       throw e;
     } finally {
       setMintingInProgress(false);
-    }
+    }  
   };
+
 
   const mintingGroupAllowlistCheck = async () => {
     const group = selectedGroup == DEFAULT_GUARD_NAME ? undefined : selectedGroup;
@@ -474,6 +517,7 @@ export const MintNFTs = ({ onClusterChange }) => {
 
   return (
     <div>
+
       <div className={styles.container}>
         <div className={styles.inlineContainer}>
           <h1 className={styles.title} style={{display:"none", visibility:"hidden"}}>Network: </h1>
@@ -507,6 +551,8 @@ export const MintNFTs = ({ onClusterChange }) => {
         textShadow: '1px 1px black', fontFamily: 'Goldman, sans-serif' }}>Minted NFTs: {mintedCount} /2000</h2> {/* Display the minted count */}
       </div>
 
+
+
       <div>
         <div className={styles.container} style={{ position:"absolute", top:"82%", left:"50%", transform: "translate(-50%,-50%)" }}>
           <h1 className={styles.title} style={{position:"fixed", top:"-400%"}}>NFT Mint Address: {nft ? nft.mint.address.toBase58() : ""}</h1>
@@ -532,8 +578,23 @@ export const MintNFTs = ({ onClusterChange }) => {
               /> */}
             </div>
           )}
+
+          {showMintMenu && (
+              <div className="mintMenu" style={{zIndex: '10000000000000000000000'}}>
+                <label>How many NFTs would you like to mint?</label>
+                <input
+                  type="number"
+                  value={numNftsToMint}
+                  onChange={(e) => setNumNftsToMint(Math.max(1, parseInt(e.target.value)))}
+                  min="1"
+                />
+                <button onClick={handleMintConfirm}>Confirm</button>
+                <button onClick={() => setShowMintMenu(false)}>Cancel</button>
+              </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
+

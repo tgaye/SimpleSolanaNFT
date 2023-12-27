@@ -1,12 +1,12 @@
 {
-  "number": 10,
+  "number": 13,
   "symbol": "BUDDY",
   "sellerFeeBasisPoints": 250,
   "isMutable": true,
-  "isSequential": true,
+  "isSequential": false,
   "creators": [
     {
-      "address": "Dpyr9a1rfw8zNw5hStcB24dqb6Zc46ccxizw3NAfRS1S",
+      "address": "2znssQJJxzNLW61ayhnTfGxe9xmDaKfzddoKgMvXPJbH",
       "share": 100
     }
   ],
@@ -20,7 +20,7 @@
     "default": {
       "solPayment": {
         "value": 0.01,
-        "destination": "BGuoR2mFnoEHCBgP4DFarRyhpsTYcqJgDFRTZm9rkSCq"
+        "destination": "CK3t6PSDFiqfdXDhdgDYmbBaq7Vy3Jr2DdEL5iv8ZQWG"
       }
     }
   }
