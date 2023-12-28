@@ -1,13 +1,13 @@
-  "guards": {
+"guards": {
     "default": {
       "solPayment": {
         "value": 0.01,
         "destination": "6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv"
       },
       "mintLimit" : {"id":1, "limit":2},
-      "gatekeeper": {
-        "network": publicKey("ignREusXmGrscGNUesoU9mxfds9AiYTezUKex2PsZV6"),
-        "expireOnUse": true,
+      "startDate": {
+        "date": "1703735394" 
       }
+
     }
   }

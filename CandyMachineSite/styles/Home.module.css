@@ -121,7 +121,7 @@
   padding: 0.5rem 1rem;
   position: relative;
   margin-bottom: -22px;
-  transform: rotate(-5deg);
+  /* transform: rotate(-5deg); */
 }
 
 .nftPreview img {

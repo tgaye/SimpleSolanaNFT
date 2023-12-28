@@ -25,30 +25,24 @@ pwd
 # <Owner Wallet Public Key>
 # <Owner Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Owner.json
-6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv
+# <Paste Here For Ease>
+FsQWjrk1ubL17jpQUi2UMF7GLCRqG13KDj5Snepuy4vh
 
 # <Creator Wallet Public Key>
 # <Creator Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Creator.json
-6Sdy4UugdSU1rZNrfLioGCs3JXPHpCjv7t5a7P4rG6aY
+# <Paste Here For Ease>
+9FhuQungKLHHt5iaaWNBZezcs9YdKErxq5ypMGhPhvpu
 
-solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json
-solana config set --url https://api.devnet.solana.com
-solana config get
+###  Do the below if you haven't setup config before 
 
-solana airdrop 1 GwGQeUGCwJcJ1UmoeLzoUzwNRi5nMFXaFYafzdgTKEjx --url https://api.devnet.solana.com
-solana airdrop 1 GAJh6ixRTSS6uh47ZDEUgqjhdKXRV7h3LAooMXpKmHqg --url https://api.devnet.solana.com
-solana airdrop 1 8C4nNMisTKw9XwGhoK7GodMuwPWd3FPZPEis9KDDEnUt --url https://api.devnet.solana.com
+# solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json
+# solana config set --url https://api.devnet.solana.com
+# solana config get
 
-solana balance <Owner Wallet Public Key>
-solana balance <Creator Wallet Public Key>
+# solana airdrop 1 "<creator wallet>" --url https://api.devnet.solana.com
+# solana airdrop 1 "<creator wallet>" --url https://api.devnet.solana.com
 
-# Download Metaplex Sample NFT Collection
-# https://docs.metaplex.com/programs/candy-machine/how-to-guides/my-first-candy-machine-part1#set-up-your-project
-# https://docs.metaplex.com/assets/files/assets-ff6bd873ecd07b49c86faf3c7aab82d2.zip
-Invoke-WebRequest -Uri https://docs.metaplex.com/assets/files/assets-ff6bd873ecd07b49c86faf3c7aab82d2.zip -OutFile ./assets.zip
-
-Expand-Archive ./assets.zip -DestinationPath ./
 
 # Create Candy Machine Config File
 ./sugar create-config
@@ -61,10 +55,10 @@ Expand-Archive ./assets.zip -DestinationPath ./
 ./sugar deploy
 
 [1/3] Creating collection NFT for candy machine
-Collection mint ID: QJsQYZsqdHhfyWHcENBNN12jAXopqoRgpaV7eRTMPGR
+Collection mint ID: CD2dtKYKLhrPWz47iWKdpkdehKnapF1NQugD8Ks1qeTt
 
 [2/3] Creating candy machine
-Candy machine ID: EgbkMtA9i576ejpiu5rNmgCnR94j4pg2jaVg7XM9x4Nd
+Candy machine ID: GP9p7g5DZr9A2JLkTQd6sf6rmAnwiqfYuQT2YTqtho3s
 
 # Verify Candy Machine Deployment and Setup
 ./sugar verify
@@ -74,9 +68,9 @@ Candy machine ID: EgbkMtA9i576ejpiu5rNmgCnR94j4pg2jaVg7XM9x4Nd
 ./sugar guard show
 
 # Setup KeyStrokes Candy Machine UI
-Expand-Archive "./KeyStrokes Candy Machine UI - V1.zip" -DestinationPath ./
-cd '.\KeyStrokes Candy Machine UI - V1\'
+cd '.\CandyMachineSite\'
 cp .\.env.example .env
+
 # Update .env file with Candy Machine
 npm install
 npm run dev

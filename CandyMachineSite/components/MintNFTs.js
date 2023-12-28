@@ -581,11 +581,11 @@ const LearnMoreButton = () => {
           </div>
           {nft && (
             <div className={styles.nftPreview}>
-            <h1 style={{ position:"absolute", top:"-30%", zIndex:"100000000000000000000"  }}>{nft.name}</h1>              
+            <h1 style={{ position:"absolute", top:"-62%", zIndex:"100000000000000000000", width:"20vh", height:"5vh", fontSize: '2vh'   }}>{nft.name}</h1>              
             <img
                 src={nft?.json?.image || "/fallbackImage.jpg"}
                 alt="The downloaded illustration of the provided NFT address."
-                style={{position:"fixed", top:"-130%"}}
+                style={{position:"fixed", top:"-120%", width:"20vh", height:"20vh"}}
               />
             </div>
           )}
@@ -598,21 +598,7 @@ const LearnMoreButton = () => {
                 style={{ width: '50vh', height: '42vh', textAlign: 'center', justifyContent: 'center'}}
               >
                 <div className={styles.scrollableText}>
-                <p style={{marginTop: '1.5vh', width: '36vh', textAlign: 'center', justifyContent: 'center', marginLeft: '6vh'}}>
-                <span style={{fontWeight: 'bold'}}>SOLbuddy</span> is the  <span style={{fontWeight: 'bold'}}>first example of an on-chain interactive video game </span> on the <span style={{fontWeight: 'bold'}}>Solana blockchain.</span><br></br><br></br>
-                <span style={{fontWeight: 'bold'}}>The tokens</span> exist as <span style={{fontWeight: 'bold'}}>SPL NFTs</span> that follow the <span style={{fontWeight: 'bold'}}>metaplex token standard</span>.  
-                The data for the classic Interactive Buddy flash game is  <span style={{fontWeight: 'bold'}}>stored and accessible on-chain.</span> <br></br> <br></br> 
-                
-                <span style={{fontWeight: 'bold'}}>Currently supported</span> on <span style={{fontWeight: 'bold'}}>Solscan,  MagicEden,</span>  working with Tensor team for future support.
-                
-                <br></br><br></br>Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
-
-                <br></br><br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
-                Mint Price: &nbsp; .5 SOL <br></br>
-                Mint Supply: &nbsp; 2000 NFTs <br></br>
-                Wallet Limit: &nbsp; 10 NFTs
-                </span>
-                </p>    
+                  <span>add your text information here.</span>
                 </div>
 
               </WindowsXPWindow>
