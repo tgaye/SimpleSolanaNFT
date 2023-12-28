@@ -34,56 +34,56 @@ cmd /c "curl https://release.solana.com/v1.15.2/solana-install-init-x86_64-pc-wi
 solana --version <br>
 solana-keygen --version
 
-Get current directory:
+Get current directory:  <br>
 cd SimpleSolanaNFT
 
-<Owner Wallet Public Key>
-<Owner Wallet Phrase>
-solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Owner.json
+<Owner Wallet Public Key>  <br>
+<Owner Wallet Phrase>  <br>
+solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Owner.json  <br>
 <Paste Here For Ease>
 
 
-<Creator Wallet Public Key>
-<Creator Wallet Phrase>
-solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Creator.json
+<Creator Wallet Public Key>  <br>
+<Creator Wallet Phrase>  <br>
+solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Creator.json  <br>
 <Paste Here For Ease>
 
 
 ###  Do the below if you haven't setup config before 
-solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json
-solana config set --url https://api.devnet.solana.com
-solana config get
+solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json  <br>
+solana config set --url https://api.devnet.solana.com  <br>
+solana config get  <br>
 
+solana airdrop 1 "<creator wallet>" --url https://api.devnet.solana.com  <br>
 solana airdrop 1 "<creator wallet>" --url https://api.devnet.solana.com
-solana airdrop 1 "<creator wallet>" --url https://api.devnet.solana.com
 
 
-### Create Candy Machine Config File
+### Create Candy Machine Config File  <br>
 ./sugar create-config
 
-### Upload assets
+### Upload assets  <br>
 ./sugar upload
 
-### Deploy Candy Machine
+### Deploy Candy Machine  <br>
 ./sugar deploy
 
-[1/3] Creating collection NFT for candy machine
-<Paste Here For Ease>
+[1/3] Creating collection NFT for candy machine  <br>
+<Paste Here For Ease>  <br>
 Collection mint ID: CD2dtKYKLhrPWz47iWKdpkdehKnapF1NQugD8Ks1qeTt
 
-[2/3] Creating candy machine
-<Paste Here For Ease>
+[2/3] Creating candy machine  <br>
+<Paste Here For Ease>  <br>
 Candy machine ID: Dh7dw1DFsQ7VpuyA8Eu3vS89kZ1d9LEebQj9QX6J4wfM
 
-### Verify Candy Machine Deployment and Setup
+### Verify Candy Machine Deployment and Setup  <br>
 ./sugar verify
 
-### Add Candy Guards
-./sugar guard add
+### Add Candy Guards  <br>
+./sugar guard add  <br>
 ./sugar guard show
 
-### Setup KeyStrokes Candy Machine UI
-cd '.\CandyMachineSite\'
+### Setup KeyStrokes Candy Machine UI  <br>
+cd '.\CandyMachineSite\'  <br>
 cp .\.env.example .env
 
 ### Update .env file with Candy Machine
