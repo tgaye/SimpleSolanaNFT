@@ -511,15 +511,15 @@ const LearnMoreButton = () => {
   };
 
   const status = candyMachineLoaded && (
-    <div className={styles.container}>
-      { (isLive && !hasEnded) && <h1 className={styles.title}>Minting Live!</h1> }
-      { (isLive && hasEnded) && <h1 className={styles.title}>Minting End!</h1> }
-      { !isLive && <h1 className={styles.title}>Minting Not Live!</h1> }
-      { !addressGateAllowedToMint && <h1 className={styles.title}>Wallet address not allowed to mint</h1> }
-      { mintLimitReached && <h1 className={styles.title}>Minting limit reached</h1> }
-      { (!hasEnoughSol || !hasEnoughSolForFreeze) && <h1 className={styles.title}>Insufficient SOL balance</h1> }
+    <div className={styles.container} style={{color:"white"}}>
+      { (isLive && !hasEnded) && <h1 className={styles.title} style={{color:"white"}}>Minting Live!</h1> }
+      { (isLive && hasEnded) && <h1 className={styles.title} style={{color:"white"}}>Minting End!</h1> }
+      { !isLive && <h1 className={styles.title} style={{color:"white"}}>Minting Not Live!</h1> }
+      { !addressGateAllowedToMint && <h1 className={styles.title} style={{color:"white"}}>Wallet address not allowed to mint</h1> }
+      { mintLimitReached && <h1 className={styles.title} style={{color:"white"}}>Minting limit reached</h1> }
+      { (!hasEnoughSol || !hasEnoughSolForFreeze) && <h1 className={styles.title} style={{color:"white"}}>Insufficient SOL balance</h1> }
       { (!nftGatePass || missingNftBurnForPayment || missingNftForPayment) && <h1 className={styles.title}>Missing required NFT for minting</h1> }
-      { isSoldOut && <h1 className={styles.title}>Sold out!</h1> }
+      { isSoldOut && <h1 className={styles.title} style={{color:"white"}}>Sold out!</h1> }
       { isMaxRedeemed && <h1 className={styles.title}>Maximum amount of NFTs allowed to be minted has already been minted!</h1> }
       { (!splTokenGatePass || noSplTokenToBurn || noSplTokenToPay || noSplTokenForFreeze) && <h1 className={styles.title}>Missing required SPL token for minting</h1> }
     </div>
@@ -565,7 +565,7 @@ const LearnMoreButton = () => {
 
       <div>
         <div className={styles.container} style={{ position:"absolute", top:"82%", left:"50%", transform: "translate(-50%,-50%)" }}>
-          <h1 className={styles.title} style={{position:"fixed", top:"-400%"}}>NFT Mint Address: {nft ? nft.mint.address.toBase58() : ""}</h1>
+          <h1 className={styles.title} style={{position:"absolute", top:"-200%", display:"none"}}>NFT Mint Address: {nft ? nft.mint.address.toBase58() : ""}</h1>
           { disableMint && status }
           { mintingInProgress && <h1 className={styles.title}>Minting In Progress!</h1> }
           <div className={styles.nftForm}>
@@ -581,11 +581,12 @@ const LearnMoreButton = () => {
           </div>
           {nft && (
             <div className={styles.nftPreview}>
-            <h1 style={{ position:"fixed", top:"-100%",  }}>{nft.name}</h1>              
-            {/* <img
+            <h1 style={{ position:"absolute", top:"-30%", zIndex:"100000000000000000000"  }}>{nft.name}</h1>              
+            <img
                 src={nft?.json?.image || "/fallbackImage.jpg"}
                 alt="The downloaded illustration of the provided NFT address."
-              /> */}
+                style={{position:"fixed", top:"-130%"}}
+              />
             </div>
           )}
 
@@ -596,7 +597,7 @@ const LearnMoreButton = () => {
                 onClose={handleClose}
                 style={{ width: '50vh', height: '42vh', textAlign: 'center', justifyContent: 'center'}}
               >
-             
+                <div className={styles.scrollableText}>
                 <p style={{marginTop: '3vh', width: '36vh', textAlign: 'center', justifyContent: 'center', marginLeft: '6vh'}}>
                 <span style={{fontWeight: 'bold'}}>SOLbuddy</span> is the  <span style={{fontWeight: 'bold'}}>first example of an on-chain interactive video game </span> on the <span style={{fontWeight: 'bold'}}>Solana blockchain.</span><br></br><br></br>
                 <span style={{fontWeight: 'bold'}}>The tokens</span> exist as <span style={{fontWeight: 'bold'}}>SPL NFTs</span> that follow the <span style={{fontWeight: 'bold'}}>metaplex token standard</span>.  
@@ -607,10 +608,12 @@ const LearnMoreButton = () => {
                 <br></br><br></br>Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
 
                 <br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
-                Mint Price: &nbsp; 1 SOL <br></br>
+                Mint Price: &nbsp; .5 SOL <br></br>
                 Mint Supply: &nbsp; 2000 NFTs
                 </span>
-                </p>            
+                </p>    
+                </div>
+
               </WindowsXPWindow>
             </div>
           )}
@@ -630,22 +633,25 @@ const LearnMoreButton = () => {
             justifyContent: 'center'
           }}
         >
-          <div style={{ padding: '20px' }}>
-            <div style={{ marginBottom: '10px' }}>
-              How many NFTs would you like to mint?
-            </div>
-            <input
-              type="number"
-              value={numNftsToMint}
-              onChange={(e) => setNumNftsToMint(Math.max(1, parseInt(e.target.value)))}
-              min="1"
-              style={{ marginBottom: '20px' }}
-            />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <button onClick={handleMintConfirm} style={{ marginRight: '5px' }}>Confirm</button>
-              <button onClick={() => setShowMintMenu(false)}>Cancel</button>
-            </div>
+        <div style={{ padding: '20px' }}>
+          <div style={{ marginBottom: '10px' }}>
+            How many NFTs would you like to mint?
           </div>
+          <input
+            type="number"
+            value={numNftsToMint}
+            onChange={(e) => setNumNftsToMint(Math.max(1, parseInt(e.target.value)))}
+            min="1"
+            style={{ marginBottom: '20px' }}
+          />
+          <div style={{ marginBottom: '10px', fontWeight: '700', fontSize: '2vh' }}>
+            Price: {numNftsToMint ? numNftsToMint * 0.5 + " SOL" : "0 SOL"}
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <button onClick={handleMintConfirm} style={{ marginRight: '5px' }}>Confirm</button>
+            <button onClick={() => setShowMintMenu(false)}>Cancel</button>
+          </div>
+        </div>
         </WindowsXPWindow>
       )}
 

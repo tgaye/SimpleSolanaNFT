@@ -25,12 +25,12 @@ pwd
 # <Owner Wallet Public Key>
 # <Owner Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Owner.json
-CK3t6PSDFiqfdXDhdgDYmbBaq7Vy3Jr2DdEL5iv8ZQWG
+6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv
 
 # <Creator Wallet Public Key>
 # <Creator Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Creator.json
-2znssQJJxzNLW61ayhnTfGxe9xmDaKfzddoKgMvXPJbH
+6Sdy4UugdSU1rZNrfLioGCs3JXPHpCjv7t5a7P4rG6aY
 
 solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json
 solana config set --url https://api.devnet.solana.com
@@ -61,10 +61,10 @@ Expand-Archive ./assets.zip -DestinationPath ./
 ./sugar deploy
 
 [1/3] Creating collection NFT for candy machine
-Collection mint ID: FUB8rU26vofyEDKVi4hqRAuGuWbb1m8WiufkDaVCpK2y
+Collection mint ID: QJsQYZsqdHhfyWHcENBNN12jAXopqoRgpaV7eRTMPGR
 
 [2/3] Creating candy machine
-Candy machine ID: AmBkim2eCdpms7ivyMeQ4MH6xsJJMXmK1PtuD1wcGprA
+Candy machine ID: EgbkMtA9i576ejpiu5rNmgCnR94j4pg2jaVg7XM9x4Nd
 
 # Verify Candy Machine Deployment and Setup
 ./sugar verify

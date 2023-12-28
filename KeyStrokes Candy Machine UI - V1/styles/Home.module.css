@@ -150,6 +150,11 @@
   color: black !important;
 }
 
+.scrollableText {
+  max-height: 34vh;
+  overflow-y: auto;
+}
+
 /* .wallet-adapter-dropdown{
   transform: scale(2);
 } */
