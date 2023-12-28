@@ -23,4 +23,6 @@ Install Node:
 https://nodejs.org/en/download
 npm --version
 
-If you have these this demo should work on a windows machine without any complicated subsystems or VMs.
+### If you have these this demo should work on a windows machine without any complicated subsystems or VMs. <br>
+
+### list of commands:
