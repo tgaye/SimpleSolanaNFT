@@ -21,6 +21,10 @@
       "solPayment": {
         "value": 0.01,
         "destination": "CK3t6PSDFiqfdXDhdgDYmbBaq7Vy3Jr2DdEL5iv8ZQWG"
+      },
+      "mintLimit": {
+        "id": 3,
+        "limit": 5
       }
     }
   }

@@ -601,10 +601,13 @@ const LearnMoreButton = () => {
                 <span style={{fontWeight: 'bold'}}>SOLbuddy</span> is the  <span style={{fontWeight: 'bold'}}>first example of an on-chain interactive video game </span> on the <span style={{fontWeight: 'bold'}}>Solana blockchain.</span><br></br><br></br>
                 <span style={{fontWeight: 'bold'}}>The tokens</span> exist as <span style={{fontWeight: 'bold'}}>SPL NFTs</span> that follow the <span style={{fontWeight: 'bold'}}>metaplex token standard</span>.  
                 The data for the classic Interactive Buddy flash game is  <span style={{fontWeight: 'bold'}}>stored and accessible on-chain.</span> <br></br> <br></br> 
-                Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
+                
+                <span style={{fontWeight: 'bold'}}>Currently supported</span> on <span style={{fontWeight: 'bold'}}>Solscan,  MagicEden,</span>  working with Tensor team for future support.
+                
+                <br></br><br></br>Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
 
                 <br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
-                Mint Price: &nbsp; 0.5 SOL <br></br>
+                Mint Price: &nbsp; 1 SOL <br></br>
                 Mint Supply: &nbsp; 2000 NFTs
                 </span>
                 </p>            
