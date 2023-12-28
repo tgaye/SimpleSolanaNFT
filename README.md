@@ -1,3 +1,5 @@
+# Please leave a ⭐ if this helps you.
+
 ## Currently Supported:
 ✅ Mobile View As A React App <br>
 ✅ Easy Vercel Deployment <br>
