@@ -16,11 +16,11 @@ GIT
 Node
 
 Install Git:
-https://git-scm.com/download/win
+<https://git-scm.com/download/win>
 git --version
 
 Install Node:
-https://nodejs.org/en/download
+<https://nodejs.org/en/download>
 npm --version
 
 ### If you have these this demo should work on a windows machine without any complicated subsystems or VMs. <br>
@@ -29,7 +29,7 @@ npm --version
 
 
 Install Solana Tool Suite:
-https://docs.solana.com/cli/install-solana-cli-tools#windows
+<https://docs.solana.com/cli/install-solana-cli-tools#windows>
 cmd /c "curl https://release.solana.com/v1.15.2/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs"
 solana --version
 solana-keygen --version
