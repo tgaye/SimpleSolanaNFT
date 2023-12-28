@@ -22,7 +22,11 @@
         "value": 0.01,
         "destination": "6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv"
       },
-      "mintLimit" : {"id":1, "limit":2}
+      "mintLimit" : {"id":1, "limit":2},
+      "startDate": {
+        "date": "1703742648" 
+      }
+
     }
   }
 }

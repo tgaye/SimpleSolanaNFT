@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -23,6 +23,33 @@ import dynamic from 'next/dynamic';
 import keyStrokes from '../public/images/Key Strokes.jpeg'
 import yT from '../public/images/promo3.png'
 import Image from 'next/image';
+
+function LaunchTime() {
+  const [timeRemaining, setTimeRemaining] = useState(1703742648); // Replace with your actual start date
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeRemaining(prevTime => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTime = (time) => {
+    const days = Math.floor(time / (60 * 60 * 24));
+    const hours = Math.floor((time % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((time % (60 * 60)) / 60);
+    const seconds = time % 60;
+
+    return `${hours} : ${minutes} : ${seconds}`;
+  };
+
+  return (
+    <div style={{ color: 'white', fontSize: '3vh', position: 'absolute', left: '50%', top: '78%', transform: 'translate(-50%, -50%)', textShadow: '1px 1px black', fontFamily: 'Goldman, sans-serif' }}>
+      {timeRemaining > 0 ? formatTime(timeRemaining) : ''}
+    </div>
+  );
+}
 
 export default function Home() {
   const [network, setNetwork] = useState(WalletAdapterNetwork.Devnet);
@@ -86,7 +113,8 @@ export default function Home() {
             </WindowsXPWindow>
           </div> */}
 
-          <MintNFTs onClusterChange={handleChange} onLearnMoreClick={() => setShowLearnMore(true)} />        
+          <MintNFTs onClusterChange={handleChange} onLearnMoreClick={() => setShowLearnMore(true)} />       
+          <LaunchTime /> 
           </div>
           </MetaplexProvider>
         </WalletModalProvider>

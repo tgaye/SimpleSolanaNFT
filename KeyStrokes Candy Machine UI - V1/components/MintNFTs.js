@@ -598,7 +598,7 @@ const LearnMoreButton = () => {
                 style={{ width: '50vh', height: '42vh', textAlign: 'center', justifyContent: 'center'}}
               >
                 <div className={styles.scrollableText}>
-                <p style={{marginTop: '3vh', width: '36vh', textAlign: 'center', justifyContent: 'center', marginLeft: '6vh'}}>
+                <p style={{marginTop: '1.5vh', width: '36vh', textAlign: 'center', justifyContent: 'center', marginLeft: '6vh'}}>
                 <span style={{fontWeight: 'bold'}}>SOLbuddy</span> is the  <span style={{fontWeight: 'bold'}}>first example of an on-chain interactive video game </span> on the <span style={{fontWeight: 'bold'}}>Solana blockchain.</span><br></br><br></br>
                 <span style={{fontWeight: 'bold'}}>The tokens</span> exist as <span style={{fontWeight: 'bold'}}>SPL NFTs</span> that follow the <span style={{fontWeight: 'bold'}}>metaplex token standard</span>.  
                 The data for the classic Interactive Buddy flash game is  <span style={{fontWeight: 'bold'}}>stored and accessible on-chain.</span> <br></br> <br></br> 
@@ -607,9 +607,10 @@ const LearnMoreButton = () => {
                 
                 <br></br><br></br>Your purchase will fund <span style={{fontWeight: 'bold'}}>continued opensource development for Solana.</span>  Please Enjoy!
 
-                <br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
+                <br></br><br></br><br></br><span style={{fontWeight: 'bold', fontSize:'2vh'}}>
                 Mint Price: &nbsp; .5 SOL <br></br>
-                Mint Supply: &nbsp; 2000 NFTs
+                Mint Supply: &nbsp; 2000 NFTs <br></br>
+                Wallet Limit: &nbsp; 10 NFTs
                 </span>
                 </p>    
                 </div>
@@ -644,7 +645,7 @@ const LearnMoreButton = () => {
             min="1"
             style={{ marginBottom: '20px' }}
           />
-          <div style={{ marginBottom: '10px', fontWeight: '700', fontSize: '2vh' }}>
+          <div style={{ marginBottom: '10px', fontWeight: '700' }}>
             Price: {numNftsToMint ? numNftsToMint * 0.5 + " SOL" : "0 SOL"}
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
