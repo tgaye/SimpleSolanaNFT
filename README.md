@@ -28,10 +28,10 @@ npm --version
 # list of commands:
 
 
-Install Solana Tool Suite:
-<https://docs.solana.com/cli/install-solana-cli-tools#windows>
-cmd /c "curl https://release.solana.com/v1.15.2/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs"
-solana --version
+Install Solana Tool Suite: <br>
+<https://docs.solana.com/cli/install-solana-cli-tools#windows> <br>
+cmd /c "curl https://release.solana.com/v1.15.2/solana-install-init-x86_64-pc-windows-msvc.exe --output C:\solana-install-tmp\solana-install-init.exe --create-dirs" <br>
+solana --version <br>
 solana-keygen --version
 
 Get current directory:
