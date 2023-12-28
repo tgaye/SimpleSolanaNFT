@@ -25,11 +25,7 @@ npm --version
 
 ### If you have these this demo should work on a windows machine without any complicated subsystems or VMs. <br>
 
-### list of commands:
-
-
-# Candy Machine Windows Edition! Launch Solana NFT Collection with Metaplex Candy Machine V3 and Sugar
-
+# list of commands:
 
 
 Install Solana Tool Suite:
