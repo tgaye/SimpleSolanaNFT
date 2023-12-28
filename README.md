@@ -1,8 +1,8 @@
 ## Currently Supported:
-✅ Mobile View As A React App
-✅ Easy Vercel Deployment
-✅ Mint Gaurd (wallet caps)
-✅ Time Based Mint Delay (set a start time)
+✅ Mobile View As A React App <br>
+✅ Easy Vercel Deployment <br>
+✅ Mint Gaurd (wallet caps) <br>
+✅ Time Based Mint Delay (set a start time) <br>
 ✅ Batch Minting
 
 ## Coming Soon:
