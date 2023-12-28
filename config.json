@@ -1,12 +1,12 @@
 {
-  "number": 13,
-  "symbol": "BUDDY",
+  "number": 10,
+  "symbol": "NFT",
   "sellerFeeBasisPoints": 250,
   "isMutable": true,
   "isSequential": false,
   "creators": [
     {
-      "address": "6Sdy4UugdSU1rZNrfLioGCs3JXPHpCjv7t5a7P4rG6aY",
+      "address": "9FhuQungKLHHt5iaaWNBZezcs9YdKErxq5ypMGhPhvpu",
       "share": 100
     }
   ],
@@ -16,17 +16,5 @@
   "shdwStorageAccount": null,
   "pinataConfig": null,
   "hiddenSettings": null,
-  "guards": {
-    "default": {
-      "solPayment": {
-        "value": 0.01,
-        "destination": "6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv"
-      },
-      "mintLimit" : {"id":1, "limit":2},
-      "startDate": {
-        "date": "1703735394" 
-      }
-
-    }
-  }
+  "guards": null
 }

@@ -26,16 +26,15 @@ pwd
 # <Owner Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Owner.json
 # <Paste Here For Ease>
-FsQWjrk1ubL17jpQUi2UMF7GLCRqG13KDj5Snepuy4vh
+
 
 # <Creator Wallet Public Key>
 # <Creator Wallet Phrase>
 solana-keygen new --outfile C:\Users\User\Desktop\Metaplex\Creator.json
 # <Paste Here For Ease>
-9FhuQungKLHHt5iaaWNBZezcs9YdKErxq5ypMGhPhvpu
+
 
 ###  Do the below if you haven't setup config before 
-
 # solana config set --keypair C:\Users\User\Desktop\Metaplex\Owner.json
 # solana config set --url https://api.devnet.solana.com
 # solana config get

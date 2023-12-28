@@ -1,3 +1,16 @@
+// Simple Mint Example with cap of 10 mints per wallet
+"guards": {
+    "default": {
+      "solPayment": {
+        "value": 0.01,
+        "destination": "6WT4xktDafDodcEHw1DfBtQzY5nvCE2TT9eHnj5PnFuv"
+      },
+      "mintLimit" : {"id":1, "limit":10}
+    }
+  }
+
+// Mint with start date example
+
 "guards": {
     "default": {
       "solPayment": {
