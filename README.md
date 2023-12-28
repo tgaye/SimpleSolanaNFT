@@ -6,7 +6,7 @@
 ✅ Batch Minting
 
 ## Coming Soon:
-✅ Whitelist Examples
+✅ Whitelist Examples <br>
 ✅ Captcha Examples
 
 Clone the repo into a new directory and input the prompts from commands.sh into your terminal in the order they are written.
