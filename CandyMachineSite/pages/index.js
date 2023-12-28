@@ -25,49 +25,32 @@ import yT from '../public/images/promo3.png'
 import Image from 'next/image';
 
 function LaunchTime() {
-  // Assuming the launch time is a future Unix timestamp
-  const launchTime = 1703735394 * 1000; // Convert to milliseconds
-
-  const calculateTimeRemaining = () => {
-    const currentTime = Date.now();
-    const timeLeft = launchTime - currentTime;
-    return timeLeft > 0 ? Math.floor(timeLeft / 1000) : 0;
-  };
-
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+  const [timeRemaining, setTimeRemaining] = useState(1703742648); // Replace with your actual start date
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
+      setTimeRemaining(prevTime => (prevTime > 0 ? prevTime - 1 : 0));
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   const formatTime = (time) => {
-    if (time <= 0) {
-      return '';
-    } else {
-      const days = Math.floor(time / (60 * 60 * 24));
-      const hours = Math.floor((time % (60 * 60 * 24)) / (60 * 60));
-      const minutes = Math.floor((time % (60 * 60)) / 60);
-      const seconds = time % 60;
-  
-      const formattedDays = days < 10 ? `0${days}` : days;
-      const formattedHours = hours < 10 ? `0${hours}` : hours;
-      const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-      const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-  
-      return `${formattedDays} : ${formattedHours} : ${formattedMinutes} : ${formattedSeconds}`;
-    }
+    const days = Math.floor(time / (60 * 60 * 24));
+    const hours = Math.floor((time % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((time % (60 * 60)) / 60);
+    const seconds = time % 60;
+
+    return `${hours} : ${minutes} : ${seconds}`;
   };
 
   return (
     <div style={{ color: 'white', fontSize: '3vh', position: 'absolute', left: '50%', top: '78%', transform: 'translate(-50%, -50%)', textShadow: '1px 1px black', fontFamily: 'Goldman, sans-serif' }}>
-      {formatTime(timeRemaining)}
+      {new Date().getTime() > timeRemaining * 1000 ? '' : formatTime(timeRemaining)}
     </div>
   );
 }
+
 
 
 export default function Home() {
